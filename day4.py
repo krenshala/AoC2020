@@ -3,8 +3,8 @@
 import re
 
 ppdata = list()
-with open("./day4.input", 'r') as day4data:
-  line = day4data.readline()
+with open("./data.day4", 'r') as data:
+  line = data.readline()
   ppdata.append( dict() )
   while line:
     if not line == "\n":
@@ -14,7 +14,7 @@ with open("./day4.input", 'r') as day4data:
         ppdata[-1].update({ key: value.strip()})
     else:
       ppdata.append( dict() )
-    line = day4data.readline()
+    line = data.readline()
 
 validpp = 0
 for e in ppdata:
