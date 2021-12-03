@@ -4,8 +4,8 @@ import sys
 
 datafile = sys.argv[1]
 
-print("\n{:-^76}\n".format(" AoC 2021 - Day 3a "))
-print("reading data from", datafile)
+print("\n  {:-^76}".format(" AoC 2021 - Day 3b "))
+print("  {:-^76}\n".format(" reading data from {}".format(datafile)))
 
 lines     = 0
 char      = list()
@@ -15,8 +15,11 @@ gamma     = ""
 gamma_d   = ""
 epsilon   = ""
 epsilon_d = ""
+oxygen    = list()  # 3b var
+carbon    = list()  # 3b var
 with open (datafile, 'r') as filename:
     data = filename.read().splitlines()
+    # day03a
     for line in data:
         lines += 1
         if lines == 1:
@@ -39,7 +42,8 @@ with open (datafile, 'r') as filename:
     epsilon   = ''.join(str(i) for i in eps)
     epsilon_d = int(epsilon, 2)
 
-print("--- lines:", lines, "\n    char   :", char,
-      "\n    gamma  :", gma, gamma, gamma_d,
-      "\n    epsilon:", eps, epsilon, epsilon_d,
-      "\n\n    power consumption is: ", gamma_d * epsilon_d)
+    # day03b
+
+# results
+print("--- day03a\n    power consumption is: ", gamma_d * epsilon_d,
+      "--- day03b\n    oxygen value", oxygen)
